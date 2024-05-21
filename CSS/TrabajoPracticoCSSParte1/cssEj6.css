@@ -1,0 +1,9 @@
+
+.parrafoImpar {
+    font-style: normal;
+  }
+
+  .parrafoPar {
+    font-style: italic;
+    font-weight: bold;
+  }
