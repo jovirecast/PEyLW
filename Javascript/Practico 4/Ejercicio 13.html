@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 13 Agenda</title>
+  </head>
+  <body onload="crearTabla()">
+    <h1>Agenda</h1>
+    <hr />
+    <form id="formulario">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" />
+      <br />
+      <label for="direccion">Dirección:</label>
+      <input type="text" name="direccion" id="direccion" />
+      <br />
+      <label for="ciudad">Ciudad:</label>
+      <input type="text" name="ciudad" id="ciudad" />
+      <br />
+      <label for="telefono">Teléfono:</label>
+      <input type="text" name="telefono" id="telefono" />
+      <br />
+      <input
+        type="button"
+        value="Nuevo Registro"
+        onclick="insertarFila(valorNombre(),
+      valorDireccion(),
+      valorCiudad(),
+      valorTelefono())"
+      />
+    </form>
+    <br />
+    <table id="tabla" border="1px">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Dirección</th>
+          <th>Ciudad</th>
+          <th>Teléfono</th>
+          <th>Operación</th>
+        </tr>
+      </thead>
+    </table>
+    <script type="text/javascript" src="./Ejercicio 13.js"></script>
+  </body>
+</html>

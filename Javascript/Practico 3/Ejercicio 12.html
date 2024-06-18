@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 12 CHAT</title>
+  </head>
+  <body>
+    <h1>CHAT</h1>
+    <hr />
+
+    <form id="formulario" >
+      <table>
+        <tr>
+          <td colspan="2">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" onmouseenter="borrar()">
+            <textarea name="textarea" id="textarea" cols="50" rows="5" ></textarea>
+          </td>
+          <td style="vertical-align: bottom; padding-bottom: 5px">
+            <input type="button" onclick="enviar()" value="Enviar Mensaje" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <div id="test"></div>
+    <script type="text/javascript" src="./Ejercicio 12.js"></script>
+  </body>
+</html>
+
+<!-- 
+Desarrollar una página de título CHAT. Esta página debe tener un formulario en 
+donde se pueda ingresar en nombre de usuario y los mensajes que se quieren 
+visualizar. Al hacer click sobre el botón “enviar mensaje” se deben listar los 
+mensajes como muestra la figura.  También se debe posicionar el cursor en el 
+textarea y eliminar el contenido anterior. 
+-->

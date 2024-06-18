@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5a y 5b</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td><button onclick="calculadora(id)" id="suma">Sumar</button></td>
+        <td><button onclick="calculadora(id)" id="resta">Restar</button></td>
+        <td><button onclick="calculadora(id)" id="divi">Dividir</button></td>
+        <td>
+          <button onclick="calculadora(id)" id="multi">Multiplicar</button>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td colspan="4">
+          <h2><b>Resultados</b></h2>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4">
+          <textarea
+            name="resultado"
+            id="resultado"
+            cols="50"
+            rows="10"
+          ></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button onclick="limpiar()" id="clear">Limpiar</button>
+        </td>
+      </tr>
+    </table>
+
+    <script
+      type="text/javascript"
+      id="funciones calculadora"
+      src="./Ejercicio 5.js"
+    ></script>
+  </body>
+</html>

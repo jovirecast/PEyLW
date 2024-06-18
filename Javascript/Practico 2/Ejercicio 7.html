@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 7</title>
+  </head>
+  <body
+    onload="mesesFor(),mesesWhile(), mesesDoWhile(),mesesForIn(),numerosPares(),formula(),numerosPrimos()"
+  >
+    <p><u>Ejercicio 7a</u></p>
+    <table border="solid 1px" style="width: 30%">
+      <tr>
+        <th>Meses recorridos con for</th>
+        <th>Meses recorridos con while</th>
+        <th>Meses recorridos con do while</th>
+        <th>Meses recorridos con for in</th>
+      </tr>
+      <tr>
+        <td><ul id="mesesFor"></ul></td>
+        <td><ul id="mesesWhile"></ul></td>
+        <td><ul id="mesesDoWhile"></ul></td>
+        <td><ul id="mesesForIn"></ul></td>
+      </tr>
+    </table>
+    <p><u>Ejercicio 7b</u></p>
+    <div id="numerosPares" style="width: 620px"></div>
+
+    <p><u>Ejercicio 7c</u></p>
+    <div id="formula" style="width: 620px"></div>
+
+    <p><u>Ejercicio 7d</u></p>
+    <label for="factor">Número a factorizar:</label>
+    <input type="number" name="factor" id="factor" />
+    <button onclick="factorial()">Calcular</button>
+    <p id="factorial"></p>
+
+    <p><u>Ejercicio 7e</u></p>
+    <div id="numerosPrimos" style="width: 620px"></div>
+    
+    <script type="text/javascript" id="bucles" src="./Ejercicio 7.js"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 8</title>
+  </head>
+  <body onload="browser()">
+    <div>
+      <p><u>Ejercicio 8a</u></p>
+      <table border="solid 1px;" style="background-color: gainsboro">
+        <ul>
+          <tr>
+            <td>
+              <li
+                id="Blanco"
+                onmouseover="colorFondo(id)"
+                onmouseleave="colorSalida(id)"
+              >
+                Blanco
+              </li>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <li
+                id="Negro"
+                onmouseover="colorFondo(id)"
+                onmouseleave="colorSalida(id)"
+              >
+                Negro
+              </li>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <li
+                id="Azul"
+                onmouseover="colorFondo(id)"
+                onmouseleave="colorSalida(id)"
+              >
+                Azul
+              </li>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <li
+                id="Rojo"
+                onmouseover="colorFondo(id)"
+                onmouseleave="colorSalida(id)"
+              >
+                Rojo
+              </li>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <li
+                id="Amarillo"
+                onmouseover="colorFondo(id)"
+                onmouseleave="colorSalida(id)"
+              >
+                Amarillo
+              </li>
+            </td>
+          </tr>
+        </ul>
+      </table>
+    </div>
+    <div>
+      <p><u>Ejercicio 8b</u></p>
+      <ul>
+        <li id="tiNqn">Neuquén <span id="nqn">-</span></li>
+        <ul id="liNqn" style="display:block;">
+          <li>Neuquén</li>
+          <li>Zapala</li>
+          <li>San Martín</li>
+          <li>Junin</li>
+        </ul>
+        <li id="tiRN">Río Negro <span id="rn">-</span></li>
+        <ul id="liRN">
+          <li>Cipolletti</li>
+          <li>Fernandez Oro</li>
+          <li>Roca</li>
+          <li>Cinco Saltos</li>
+          <li>Allen</li>
+        </ul>
+        <li id="tiBS">Buenos Aires <span id="bs">-</span></li>
+        <ul id="liBS">
+          <li>La Plata</li>
+          <li>Mar del Plata</li>
+          <li>Necochea</li>
+        </ul>
+      </ul>
+    </div>
+
+    <div>
+        <p id="browser"></p>        
+    </div>
+    <p id="test"></p>
+    <script type="text/javascript" src="./Ejercicio 8.js"></script>
+  </body>
+</html>
