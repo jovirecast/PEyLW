@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Parcial JS</title>
+    <link href="default.css" rel="stylesheet" type="text/css" />
+
+    <script>
+      var puntajeLaura = [];
+      var puntajeJorgelina = [];
+      var puntajeAlejandra = [];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const botonJugar = document.querySelector(".button");
+
+        botonJugar.addEventListener("click", function () {
+          var randomNum = bolillero();
+          var cartonLaura = document.getElementById("tira-laura");
+          var cartonJorgelina = document.getElementById("tira-jorgelina");
+          var cartonAlejandra = document.getElementById("tira-alejandra");
+          var aciertoLau = recorrerCarton(cartonLaura, randomNum);
+          var aciertoJor = recorrerCarton(cartonJorgelina, randomNum);
+          var aciertoAle = recorrerCarton(cartonAlejandra, randomNum);
+          puntajeLaura = incorporarAcierto(aciertoLau, randomNum, puntajeLaura);
+          puntajeJorgelina = incorporarAcierto(
+            aciertoJor,
+            randomNum,
+            puntajeJorgelina
+          );
+          puntajeAlejandra = incorporarAcierto(
+            aciertoAle,
+            randomNum,
+            puntajeAlejandra
+          );
+          var puntosLau = puntajeLaura.length;
+          var puntosJor = puntajeJorgelina.length;
+          var puntosAle = puntajeAlejandra.length;
+          var lider = mayorPuntaje(puntosLau, puntosJor, puntosAle);
+          if (lider == puntosLau && puntosLau > (puntosJor || puntosAle)) {
+            document.getElementById("vaGanando").innerHTML = "Va ganando Laura";
+          }
+          if (lider == puntosJor && puntosJor > (puntosLau || puntosAle)) {
+            document.getElementById("vaGanando").innerHTML =
+              "Va ganando Jorgelina";
+          }
+          if (lider == puntosAle && puntosAle > (puntosJor || puntosLau)) {
+            document.getElementById("vaGanando").innerHTML =
+              "Va ganando Alejandra";
+          }
+          if (puntosLau == puntosJor && puntosAle < puntosLau) {
+            document.getElementById("vaGanando").innerHTML = "Empate";
+          }
+          if (puntosAle == puntosJor && puntosLau < puntosJor) {
+            document.getElementById("vaGanando").innerHTML = "Empate";
+          }
+          if (puntosLau == puntosAle && puntosJor < puntosLau) {
+            document.getElementById("vaGanando").innerHTML = "Empate";
+          }
+
+          if (puntosLau > 9 && puntosJor < puntosLau && puntosAle < puntosLau) {
+            document.getElementById("vaGanando").innerHTML = "GANO LAURA";
+            botonJugar.disabled = true;
+          }
+          if (puntosAle > 9 && puntosLau < puntosAle && puntosJor < puntosAle) {
+            document.getElementById("vaGanando").innerHTML = "GANO ALEJANDRA";
+            botonJugar.disabled = true;
+          }
+          if (puntosJor > 9 && puntosLau < puntosJor && puntosAle < puntosJor) {
+            document.getElementById("vaGanando").innerHTML = "GANO JORGELINA";
+            botonJugar.disabled = true;
+          }
+        });
+      });
+
+      function bolillero() {
+        let numero = Math.floor(Math.random() * 99);
+        document.getElementById("ultimaBolilla").innerHTML = numero;
+        return numero;
+      }
+
+      function recorrerCarton(carton, numeroR) {
+        let numerosCarton = carton.children;
+        let acierto = false;
+        for (let index = 0; index < numerosCarton.length; index++) {
+          if (numerosCarton[index].innerHTML == numeroR) {
+            numerosCarton[index].style.background = "blue";
+            acierto = true;
+          }
+        }
+        return acierto;
+      }
+
+      function incorporarAcierto(acierto, numero, puntaje) {
+        var puntajeTotal = puntaje;
+        if (acierto) {
+          puntajeTotal = numeroRepetido(puntaje, numero);
+        }
+        return puntajeTotal;
+      }
+
+      function numeroRepetido(puntaje, numero) {
+        var control = false;
+
+        for (let index = 0; index < puntaje.length; index++) {
+          if (puntaje[index] == numero) {
+            control = true;
+          }
+        }
+        if (control == false) {
+          puntaje.push(numero);
+        }
+
+        return puntaje;
+      }
+
+      function mayorPuntaje(p1, p2, p3) {
+        var maximo = Math.max(p1, p2, p3);
+        return maximo;
+      }
+
+      // COMPLETE ESTA SECCIÓN CON LA RESOLUCION
+    </script>
+  </head>
+
+  <body>
+    <div id="header">
+      <div id="logo" style="margin-left: 15px">
+        <h1><a href="#">Programación Estática y Laboratorio Web</a></h1>
+        <h2><a href="#">Recuperatorio JS Ejercicio 1</a></h2>
+      </div>
+    </div>
+    <div id="menu">
+      <ul>
+        <li><a href="Ej1_Consigna.html">Consigna</a></li>
+        <li><a href="Ej1_Resolucion.html">HOJA Ejercicio</a></li>
+      </ul>
+    </div>
+    <div id="content;width: 100%;">
+      <table style="width: 60%; margin: auto">
+        <tr>
+          <td>
+            <div style="text-align: center">
+              <br /><br />
+              <div class="square" id="ultimaBolilla">0</div>
+
+              <br />
+              <button class="button">Jugar</button>
+            </div>
+            <br />
+            <div
+              id="vaGanando"
+              style="
+                font-size: 48px;
+                background-color: lightgreen;
+                border: 1px solid black;
+                padding: 10px;
+                text-align: center;
+              "
+            >
+              Empate
+            </div>
+            <br /><br />
+          </td>
+
+          <td>
+            <div class="tira-container">
+              <div class="titulo">Bingo Laura</div>
+              <div class="tira-numeros" id="tira-laura">
+                <div class="cuadrado">07</div>
+                <div class="cuadrado">22</div>
+                <div class="cuadrado">35</div>
+                <div class="cuadrado">49</div>
+                <div class="cuadrado">58</div>
+                <div class="cuadrado">63</div>
+                <div class="cuadrado">71</div>
+                <div class="cuadrado">85</div>
+                <div class="cuadrado">89</div>
+                <div class="cuadrado">91</div>
+              </div>
+            </div>
+
+            <div class="tira-container">
+              <div class="titulo">Bingo Jorgelina</div>
+              <div class="tira-numeros" id="tira-jorgelina">
+                <div class="cuadrado">05</div>
+                <div class="cuadrado">18</div>
+                <div class="cuadrado">27</div>
+                <div class="cuadrado">35</div>
+                <div class="cuadrado">44</div>
+                <div class="cuadrado">52</div>
+                <div class="cuadrado">69</div>
+                <div class="cuadrado">78</div>
+                <div class="cuadrado">85</div>
+                <div class="cuadrado">91</div>
+              </div>
+            </div>
+
+            <div class="tira-container">
+              <div class="titulo">Bingo Alejandra</div>
+              <div class="tira-numeros" id="tira-alejandra">
+                <div class="cuadrado">02</div>
+                <div class="cuadrado">13</div>
+                <div class="cuadrado">24</div>
+                <div class="cuadrado">39</div>
+                <div class="cuadrado">49</div>
+                <div class="cuadrado">57</div>
+                <div class="cuadrado">66</div>
+                <div class="cuadrado">78</div>
+                <div class="cuadrado">89</div>
+                <div class="cuadrado">91</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="footer" style="margin-top: 240px">
+      <p id="legal">
+        Copyright &copy; AtomoHost. All Rights Reserved. Designed by
+        <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.
+      </p>
+      <p id="links">
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a>
+      </p>
+    </div>
+    <br />
+    <br />
+  </body>
+</html>
