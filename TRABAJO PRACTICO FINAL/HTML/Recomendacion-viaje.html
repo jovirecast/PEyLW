@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homepage</title>
+    <title>Recomendaciones para viajes</title>
     <link rel="stylesheet" type="text/css" href="../CSS/layout/styles/layout.css" media="screen" />
   </head>
   <body>
@@ -45,53 +45,38 @@
         </div>
       </div>
     </div>
-
-    <div id="search_home">
-      <input id="buscador" type="text" placeholder="Buscar..." />
-      <button id="boton_buscar">
-        <img src="../CSS/images/icons/search.svg" alt="lupa" />
-      </button>
-    </div>
-
-    <div id="main">
-      <div id="categorias">
-        <ul>
-          <li>
-            <button id="Todas" class="boton_categorias active">Todas las categorías</button>
-          </li>
-          <li>
-            <button id="Accesorios" class="boton_categorias">Accesorios</button>
-          </li>
-          <li>
-            <button id="Filtros" class="boton_categorias">Filtros</button>
-          </li>
-          <li>
-            <button id="Iluminación" class="boton_categorias">Iluminación</button>
-          </li>
-          <li><button id="Kits" class="boton_categorias">Kits</button></li>
-          <li>
-            <button id="Lubricantes" class="boton_categorias">Lubricantes</button>
-          </li>
-          <li>
-            <button id="Neumáticos" class="boton_categorias">Neumáticos</button>
-          </li>
-        </ul>
+    <div id="cuerpo_recomendaciones">
+      <div id="volver">
+        <a href="./Homepage.html">
+          <img src="../CSS/images/icons/arrow-left.svg" alt="volver" />
+          <span>Volver a la tienda</span>
+        </a>
       </div>
-      <div id="grupo_productos">
-        <!-- Hecho en javascript
-          <div id="producto">
-          <img src="../CSS/images/products/Lubricantes/Shell/hx8_5w40.png" alt="">
-          <div id="detalle_producto">
-            <span>MARCA PRODUCTO A</span>
-            <p>descripción producto</p>
-            <h4>PRECIO A</h4>
-            <button>Agregar</button>
+      <div id="recomendaciones_cuerpo_princial">
+        <div id="tipo_recomendacion">Viaje</div>
+        <div id="interfaz_pregunta" class="interfaz_pregunta">
+          <button id="largos" class="boton_modificacion">Distancias cortas</button> <button id="cortos" class="boton_modificacion">Distancias largas</button
+          ><button id="nieve" class="boton_modificacion">Destinos con nieve</button>
+        </div>
+        <div id="consejos"><span id="consejos_contenidos"> </span></div>
+        <div id="productos_relacionados">
+          <div id="grupo_productos_relacionados">
+            Hecho en javascript
+            <div id="producto">
+              <img src="../CSS/images/products/Lubricantes/Shell/hx8_5w40.jpg" alt="" />
+              <div id="detalle_producto">
+                <span>MARCA PRODUCTO A</span>
+                <p>descripción producto</p>
+                <h4>PRECIO A</h4>
+                <button>Agregar</button>
+              </div>
+            </div>
+            Hecho en javascript
           </div>
         </div>
-        Hecho en javascript -->
       </div>
     </div>
 
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="recomendaciones.js"></script>
   </body>
 </html>

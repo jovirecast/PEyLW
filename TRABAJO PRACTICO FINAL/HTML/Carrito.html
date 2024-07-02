@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/layout/styles/layout.css" media="screen" />
+  </head>
+  <body>
+    <div id="top_banner">
+      <div id="logoempresa">
+        <a href="./Homepage.html"> <img id="logo_rueda" src="../CSS/images/logo/ruedaNoBack.png" alt="logo_rueda" /></a>
+        <a href="./Homepage.html"> <img id="logo_texto" src="../CSS/images/logo/logo.png" alt="logo_texto" /></a>
+      </div>
+      <div id="institucional_contacto">
+        <div id="datos_institucional"><span>Proyect S.A.S.</span></div>
+        <div id="datos_contacto">
+          <a href="tel:+54-299-456-7890">Teléfono/Whatapp <img src="../CSS/images/icons/whatsapp.svg" alt="whatsapp" /></a>
+          <a href="mailto:jose.reyes@est.fi.uncoma.edu.ar">Correo electrónico <img src="..//CSS/images/icons/envelope-at.svg" alt="mail" /></a>
+        </div>
+      </div>
+      <div id="carrito">
+        <a id="boton_carrito" href="./Carrito.html">
+          <img src="../CSS/images/icons/cart.svg" alt="carrito" />
+          <span id="items_carrito">0</span></a
+        >
+      </div>
+      <div id="usuario">
+        <!-- <button type="button">
+          <img src="../CSS//images/icons/person-bounding-box.svg" alt="usuario" />
+        </button> -->
+      </div>
+    </div>
+    <hr />
+
+    <div id="barraSuperior">
+      <div id="recomendacion">
+        <div id="boton_recomendaciones">
+          <button>Recomendaciones</button>
+        </div>
+        <div id="menu_recomendacion">
+          <a href="./Recomendacion-viaje.html" id="recomendaciones">Viaje</a>
+          <a href="./Recomendacion-mantenimiento.html" id="recomendaciones">Mantenimiento</a>
+          <a href="./Recomendacion-modificaciones.html" id="recomendaciones">Modificaciones</a>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="volver">
+        <a href="./Homepage.html">
+          <img src="../CSS/images/icons/arrow-left.svg" alt="volver" />
+          <span>Volver a la tienda</span>
+        </a>
+      </div>
+      <div id="grupo_carrito">
+        <div id="mensaje_carrito">
+          Carrito
+          <p id="carrito_vacio">
+            No has agregado ningún producto
+            <img src="../CSS/images/icons/search.svg" alt="lupa" />
+          </p>
+        </div>
+
+        <div id="productos_carrito" class="productos_carrito disabled">
+          <!--  Hecho en javascript
+            <div id="producto_carrito">
+            <img id="imagen_carrito" src="" alt="FOTO PRODUCTO A" />
+            <div id="carrito_producto_descripcion">
+              <span>Item</span>
+              <h3>Descripción producto</h3>
+            </div>
+            <div id="carrito_producto_cantidad">
+              <span>Unidades</span>
+              <p>1</p>
+            </div>
+            <div id="carrito_producto_precio_unitario">
+              <span>Precio</span>
+              <p>$999</p>
+            </div>
+            <div id="carrito_producto_precio_total">
+              <span>Subtotal</span>
+              <p>$999</p>
+            </div>
+            <button class="carrito_producto_eliminar">
+              <img src="../CSS/images/icons/trash.svg" alt="borrar" />
+            </button>
+          </div>
+          <div id="producto_carrito">
+            <img id="imagen_carrito" src="" alt="FOTO PRODUCTO B" />
+            <div id="carrito_producto_descripcion">
+              <span>Item</span>
+              <h3>Descripción producto</h3>
+            </div>
+            <div id="carrito_producto_cantidad">
+              <span>Unidades</span>
+              <p>2</p>
+            </div>
+            <div id="carrito_producto_precio_unitario">
+              <span>Precio</span>
+              <p>$1000</p>
+            </div>
+            <div id="carrito_producto_precio_total">
+              <span>Subtotal</span>
+              <p>$2000</p>
+            </div>
+            <button class="carrito_producto_eliminar">
+              <img src="../CSS/images/icons/trash.svg" alt="borrar" />
+            </button>
+          </div> 
+          Hecho en javascript -->
+        </div>
+        <div id="carrito_funciones" class="carrito_funciones disabled">
+          <div id="total_compra">
+            <p>Total</p>
+            <p id="total_final_compra"></p>
+            <button id="carrito_comprar">Finalizar compra <img src="../CSS/images/icons/check-lg.svg" alt="aceptar" /></button>
+          </div>
+        </div>
+        <div id="vaciar_carrito" class="disabled">
+          <button id="carrito_vaciar">Vaciar carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="Carrito.js"></script>
+  </body>
+</html>

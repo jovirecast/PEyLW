@@ -1,0 +1,188 @@
+main {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+}
+
+#grupo_carrito {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+#carrito_vacio {
+  display: flex;
+  font-weight: bold;
+  font-size: 13px;
+  color: rgb(55, 55, 55);
+  text-transform: uppercase;
+  background-color: white;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin-right: 70%;
+  padding: 2px 4px;
+}
+
+#carrito_vacio img {
+  margin-left: 10px;
+  align-items: center;
+  margin-right: auto;
+}
+
+.productos_carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#producto_carrito {
+  display: grid;
+  grid-template-columns: 2fr 6fr 2fr 2fr 2fr 1fr;
+  width: 95%;
+  background-color: white;
+  border-bottom: 1px solid rgb(55, 55, 55);
+  border-top: 1px solid rgb(55, 55, 55);
+  padding: 20px;
+  align-items: center;
+}
+
+#mensaje_carrito {
+  font-weight: bold;
+  font-size: 17px;
+  color: rgb(55, 55, 55);
+  text-transform: uppercase;
+}
+
+#imagen_carrito {
+  width: 88px;
+  height: 120px;
+  border: 1px solid;
+}
+
+#producto_carrito span {
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  text-transform: uppercase;
+}
+
+.carrito_producto_eliminar {
+  border: 1px solid;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.carrito_producto_eliminar:hover {
+  background-color: rgb(245, 197, 197);
+  transition: all 0.4s;
+}
+
+.carrito_funciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#total_compra {
+  height: 70%;
+  width: 70%;
+  border: 1px solid;
+  display: grid;
+  max-height: 219px;
+  background-color: white;
+  justify-items: center;
+  align-content: space-between;
+  position: sticky;
+  top: 200px;
+}
+
+#total_compra p {
+  font-weight: bold;
+  font-size: 17px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  text-transform: uppercase;
+}
+
+#carrito_comprar {
+  height: 50px;
+  width: 101%;
+  border: 1px solid;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  text-transform: uppercase;
+  background-color: white;
+}
+
+#carrito_comprar:hover {
+  background-color: rgb(123, 201, 136);
+  transition: all 0.4s;
+}
+
+#vaciar_carrito button {
+  border: 1px solid;
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 13px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+#vaciar_carrito button:hover {
+  background-color: rgb(245, 197, 197);
+  transition: all 0.4s;
+}
+
+.disabled {
+  display: none;
+}
+
+#volver {
+  display: grid;
+  width: 200px;
+  height: 30px;
+
+  background-color: white;
+
+  position: sticky;
+  top: 200px;
+}
+
+#volver a {
+  display: flex;
+  border: 1px solid;
+  text-decoration: none;
+  background-color: white;
+  width: 220px;
+  height: 30px;
+}
+
+#volver a:hover {
+  background-color: rgb(144, 218, 144);
+  transition: all 0.4s;
+}
+
+#volver a img {
+  align-items: center;
+  padding: 0 0 0 5px;
+}
+
+#volver a span {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  align-items: center;
+  padding: 0 0 0 10px;
+  width: 200px;
+  height: 30px;
+  align-content: center;
+}
+
+#grupo_carrito {
+  padding: 20px 0 0 40px;
+}

@@ -1,39 +1,136 @@
 #top_banner {
-  background-color: whitesmoke;
+  background-color: rgb(255, 255, 255);
   height: 100px;
-  display:flex;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
   position: sticky;
   top: 0px;
   margin: 0 auto;
   width: 98%;
-  border: 1px solid;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+}
+
+#top_banner div {
+
+  display: flex;
 }
 
 #logoempresa {
-  margin: 0 1% 0 1%;
-  border: 1px solid black;
-  width: 30%;
-  height: 80px;
+  width: 600px;
+  height: 100px;
+  margin-right: 10%;
+  align-items: center;
 }
 
 #institucional_contacto {
-  margin: 0 10% 0 1%;
-  border: 1px solid black;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  width: fit-content;
+  height: fit-content;
+  margin-right: auto;
+  align-self: end;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
 
-  width: 20%;
+#datos_institucional{
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  align-content: center;
+  margin: 0 30px;
+  align-items: flex-end;
+}
+
+#datos_contacto{
+  font-size: 18px;
+  font-weight: 700;
+  font-style: italic;
+  padding: 0 30px;
+  row-gap: 5px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid;  
+}
+
+#datos_contacto img{
+  height: 15px;
+}
+
+#carrito,
+#usuario {
+  margin-left: 50px;
+  align-items: center;
+}
+
+#usuario {
+  width: 75px;
+  height: 75px;
+}
+
+#carrito span {
+  display: flex;
+  justify-content: center;
+  border: 1px dashed;
+  font-weight: bold;
+  font-size: 12px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  text-transform: uppercase;
+}
+
+#carrito img {
+  margin: auto;
+  width: 35px;
+  height: 35px;
+}
+
+#carrito a {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#usuario img {
+  margin: auto;
+  width: 35px;
+  height: 35px;
+}
+
+#usuario button {
+  border-radius: 50%;
+  width: 50px;
   height: 50px;
+  background-color: transparent;
+  cursor: pointer;
+  border: transparent;
 }
 
-#carrito {
-  margin: 0 5% 0 5%;
-  width: 10%;
-  height: 75px;
-  border: 1px solid black;
+#logoempresa #logo_rueda {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  animation: 10s rotate linear infinite;
 }
 
-#boton_usuario {
-  margin: 0 1% 0 5%;
-  width: 10%;
-  height: 75px;
-  border: 1px solid black;
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+#logoempresa #logo_texto {
+  width: 400px;
+  height: 60px;
+  padding-bottom: 2px;
+  border-bottom: 4px double;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(55, 55, 55);
 }

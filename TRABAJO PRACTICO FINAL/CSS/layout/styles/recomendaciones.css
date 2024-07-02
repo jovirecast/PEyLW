@@ -1,0 +1,87 @@
+#cuerpo_recomendaciones {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 200px;
+}
+
+#tipo_recomendacion,
+#interfaz_pregunta,
+#consejos,
+#productos_relacionados {
+  margin-top: 10px;
+  display: flex;
+  border: 1px solid;
+  width: 80%;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+#consejos_contenidos{
+    font-style: italic;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(55, 55, 55);
+    padding: 10px;
+}
+
+
+
+#tipo_recomendacion {
+  font-weight: 800;
+  font-size: 22px;
+  font-style: italic;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  place-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+#grupo_productos_relacionados {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: auto;
+}
+
+#producto {
+  width: calc(65% - 20px);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: inherit;
+  margin: auto;
+  border-radius: 15px;
+  display: grid;
+  justify-items: stretch;
+}
+
+#lista_recomendaciones {
+    list-style-type:square;
+    padding-bottom: 10px;
+}
+
+.boton_modificacion{
+    width: 33%;
+    margin: 1px 2px;
+    background-color: white;
+    font-weight: 800;
+    font-size: 18px;
+    font-style: italic;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(55, 55, 55);
+    align-content: center;
+}
+
+.boton_modificacion:hover{
+    background-color: rgb(144, 218, 144);
+    transition: all 0.4s;
+}
+
+.boton_modificacion.active {
+    background-color:aquamarine
+  }
+
+  .boton_modificacion.inactive {
+    background-color: white;
+  }

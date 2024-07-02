@@ -1,4 +1,267 @@
 @import url("./top_banner.css");
+@import url("./carrito.css");
+@import url("./pago.css");
+@import url("./recomendaciones.css");
+
+body {
+  background-color: aliceblue;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+
+}
+hr {
+  height: 5px;
+  background-color: black;
+  position: sticky;
+  top:100px
+}
+
+/* Menu recomendaciones */
+#barraSuperior {
+  background-color: transparent;
+  height: 50px;
+  display: flex;
+  align-items: end;
+  position: sticky;
+  top: 99px;
+  margin: 0 auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+}
+
+#recomendacion {
+  display: inline-flex;
+  width: 250px;
+  height: 40px;
+  align-items: center;
+}
+
+#boton_recomendaciones {
+  width: 250px;
+  height: 40px;
+  background-color: white;
+}
+
+#boton_recomendaciones button {
+  width: 250px;
+  height: 40px;
+  text-align: left;
+  background-color: white;
+  font-weight: 800;
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  cursor: pointer;
+}
+
+#menu_recomendacion {
+  display: none;
+}
+
+#recomendaciones {
+  display: none;
+  list-style-type: none;
+  margin: 0 0 0 100px;
+  width: 250px;
+  height: 40px;
+  text-align: left;
+  background-color: white;
+  font-weight: 800;
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  cursor: pointer;
+  border: 2px solid;
+}
+
+#recomendaciones:hover {
+  background-color: rgb(144, 218, 144);
+  transition: all 0.4s;
+  
+}
+
+#recomendacion:hover #recomendaciones {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;  
+}
+
+
+#lista_categorias {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+/* Menu categorias */
 
 
 
+#categorias button:hover{
+  background-color: rgb(144, 218, 144);
+  transition: all 0.4s;
+}
+
+#categorias {
+  width: 250px;
+  height: 40px;
+  margin-right: 20px;
+  position: sticky;
+  top: 200px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.boton_categorias.active {
+  background-color:aquamarine
+}
+
+.boton_categorias {  
+  position: relative;
+  width: 250px;
+  height: 40px;
+  text-align: left;
+  background-color: white; 
+  font-weight: 800;
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  cursor: pointer;
+}
+
+#recomendacion {
+  display: inline-flex;
+  margin: 0;
+  width: 250px;
+  height: 40px;
+  margin-right: auto; 
+}
+
+#recomendacion span button{
+  width: 250px;
+  height: 40px;
+  text-align: left;
+  background-color: white;
+  font-weight: 800;
+  font-size: 20px;
+  font-style: italic;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  cursor: pointer;  
+}
+
+#menu_recomendacion{
+  display: inline-flex;
+  float: right;
+}
+
+/* Buscador */
+
+#search {
+  border: 1px solid black;
+  margin: 0 0 0 20%;
+  width: 300px;
+  height: 40px;
+  margin-left: 20px; 
+}
+
+#search_home {
+  display: flex;
+  align-items: center;
+  width: 400px; 
+  margin: 20px auto;
+}
+
+#search_home input{
+height: 30px;
+width:100%;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: rgb(55, 55, 55);
+}
+
+#buscador{
+  border: 1px solid black;
+  border-right: transparent;
+}
+
+#boton_buscar{
+  height: 34px;
+  border: 1px solid black;
+  margin: 0 0 0 0px;
+  background-color: white;
+}
+
+/* Cuerpo productos */
+
+#main {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  position:inherit;
+}
+
+#grupo_productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: auto;  
+}
+
+#producto {
+  width: calc(65% - 20px);  
+  padding-top: 15px;
+  text-align: inherit;
+  margin: auto;
+  border-radius: 15px;
+  display: grid;
+  justify-items: stretch;
+}
+
+#producto img {
+  width: 220px;
+  height: 300px;
+  border: 1px solid;
+  border-radius: 2px;
+  background-color: white;
+}
+
+#detalle_producto {
+  width: 220px; 
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  border: 1px solid;
+  border-radius: 2px;
+  background-color: white;
+}
+#detalle_producto span {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: start;
+  text-decoration: underline;
+}
+
+#detalle_producto p {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: start;
+}
+
+#detalle_producto h4 {
+  color: rgb(55, 55, 55);
+  text-align: right;
+}
+
+.boton_agregar {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(55, 55, 55);
+  width: 100%;
+  height: 30px;
+}
+
+.boton_agregar:hover {
+  background-color: rgb(144, 218, 144);
+  transition: all 0.4s;
+}
